@@ -35,11 +35,11 @@ body {
 
 /* ===== header ===== */
 .header {
-  border-bottom: 1px solid var(--color-border);
 }
 
 .header__inner {
   padding: 18px var(--gutter);
+  border-bottom: 1px solid var(--color-border);
   display: flex;
   align-items: center;
   gap: 40px;
@@ -139,7 +139,7 @@ body {
 
 .hero__text {
   font-size: 18px;
-  line-height: 26px;
+  line-height: 22px;
   color: var(--color-text);
   margin-bottom: 0;
 }
@@ -224,7 +224,7 @@ body {
 .feature__title {
   font-family: var(--font-heading);
   font-size: 36px;
-  line-height: 1.15;
+  line-height: 36px;
   font-weight: 700;
   max-width: 294px;
   margin-top: -8px;
@@ -282,7 +282,7 @@ body {
   font-family: var(--font-heading);
   font-size: 36px;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 36px;
   max-width: 480px;
   margin: 0 auto 13px;
 }
@@ -304,8 +304,6 @@ body {
 
 /* ===== footer ===== */
 .footer {
-  border-top: 1px solid var(--color-border);
-  padding: 36px 0 31px;
 }
 
 .footer__inner {
@@ -313,6 +311,9 @@ body {
   grid-template-columns: 1fr auto;
   row-gap: 43px;
   align-items: start;
+  padding-top: 36px;
+  padding-bottom: 31px;
+  border-top: 1px solid var(--color-border);
 }
 
 .footer__brand {
@@ -380,7 +381,9 @@ body {
   }
 
   .fold__diagram {
-    width: 913px;
+    width: calc(100% + 73px);
+    margin-left: -36.5px;
+    margin-right: -36.5px;
   }
 }
 
