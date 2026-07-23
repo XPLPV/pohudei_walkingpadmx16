@@ -272,7 +272,7 @@ body {
 
 /* ===== fold (Всегда под рукой) ===== */
 .fold {
-  padding: 0 0 83px;
+  padding: 0 0 67px;
 }
 
 .fold__inner {
@@ -333,7 +333,7 @@ body {
 .footer__col {
   display: flex;
   flex-direction: column;
-  gap: 19px;
+  gap: 12px;
 }
 
 .footer__link {
