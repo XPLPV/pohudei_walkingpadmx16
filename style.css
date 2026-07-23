@@ -143,7 +143,7 @@ body {
   font-size: 18px;
   line-height: 22px;
   color: var(--color-text);
-  margin-bottom: 0;
+  margin-bottom: 12px;
 }
 
 .hero__price {
@@ -230,7 +230,7 @@ body {
   font-weight: 700;
   max-width: 294px;
   margin-top: -8px;
-  margin-bottom: 15px;
+  margin-bottom: 26px;
 }
 
 .feature__paragraph {
@@ -286,7 +286,7 @@ body {
   font-weight: 700;
   line-height: 36px;
   max-width: 480px;
-  margin: 0 auto 13px;
+  margin: 0 auto 27px;
 }
 
 .fold__text {
@@ -311,7 +311,7 @@ body {
 .footer__inner {
   display: grid;
   grid-template-columns: 1fr auto;
-  row-gap: 43px;
+  row-gap: 16px;
   align-items: start;
   padding-top: 36px;
   padding-bottom: 31px;
