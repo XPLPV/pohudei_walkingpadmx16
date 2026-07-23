@@ -103,83 +103,97 @@ body {
 
 /* ===== hero (dominant module) ===== */
 .hero {
-  padding: 56px 0 80px;
+    position: relative;
+    overflow: hidden;
+    padding: 56px 0 120px;
 }
 
 .hero__inner {
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 0 var(--gutter);
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 460px);
-  gap: 40px;
-  align-items: start;
+    position: relative;
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+    min-height: 820px;
+}
+
+.hero__content {
+    position: relative;
+    z-index: 5;
+    max-width: 470px;
+    padding-top: 20px;
 }
 
 .hero__title {
-  font-family: var(--font-heading);
-  font-size: 56px;
-  line-height: 1.05;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  margin-bottom: 24px;
+    font-size: 56px;
+    line-height: 1.05;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 24px;
 }
 
 .hero__text {
-  font-size: 17px;
-  line-height: 1.5;
-  color: var(--color-text);
-  max-width: 470px;
-  margin-bottom: 28px;
+    font-size: 17px;
+    line-height: 1.55;
+    max-width: 440px;
+    margin-bottom: 28px;
 }
 
 .hero__price {
-  display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-bottom: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: baseline;
+    margin-bottom: 28px;
 }
 
 .hero__price-old {
-  font-size: 16px;
-  color: var(--color-muted);
-  text-decoration: line-through;
+    font-size: 16px;
+    color: var(--color-muted);
+    text-decoration: line-through;
 }
 
 .hero__price-new {
-  font-family: var(--font-heading);
-  font-size: 26px;
-  font-weight: 700;
+    font-size: 28px;
+    font-weight: 700;
 }
 
 .hero__price-save {
-  font-size: 14px;
-  color: var(--color-muted);
+    font-size: 14px;
+    color: var(--color-muted);
 }
 
 .hero__actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-bottom: 260px;
-}
-
-.hero__caption {
-  font-size: 13px;
-  color: var(--color-muted);
-  max-width: 420px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 40px;
 }
 
 .hero__media {
-  display: flex;
-  justify-content: center;
+    position: absolute;
+    top: -31px;
+    right: -68px;
+    width: 1066px;
+    height: 984px;
+    z-index: 1;
+    pointer-events: none;
 }
 
 .hero__image {
-  width: 100%;
-  height: auto;
-  max-width: 460px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.hero__caption {
+    position: absolute;
+    left: 120px;
+    bottom: 175px;
+    width: 320px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--color-muted);
 }
 
 /* ===== feature (Спортивный зал в вашем доме) ===== */
@@ -338,22 +352,44 @@ body {
 
 /* ===== responsive: 375 — 2000px ===== */
 
-@media (max-width: 900px) {
-  .hero__inner {
-    grid-template-columns: 1fr;
-  }
+@media (max-width:900px){
 
-  .hero__media {
-    order: -1;
-  }
+.hero{
+overflow:visible;
+}
 
-  .hero__actions {
-    margin-bottom: 40px;
-  }
+.hero__inner{
+min-height:auto;
+display:flex;
+flex-direction:column;
+}
 
-  .hero__image {
-    max-width: 320px;
-  }
+.hero__media{
+position:relative;
+top:auto;
+right:auto;
+width:100%;
+height:auto;
+margin-top:30px;
+order:-1;
+}
+
+.hero__image{
+width:100%;
+height:auto;
+}
+
+.hero__caption{
+position:absolute;
+left:8%;
+bottom:10%;
+width:60%;
+}
+
+.hero__actions{
+margin-bottom:32px;
+}
+}
 
   .feature__inner {
     grid-template-columns: 1fr;
