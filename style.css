@@ -333,6 +333,7 @@ body {
 .footer__col {
   display: flex;
   flex-direction: column;
+  gap: 2px;
 }
 
 .footer__link {
