@@ -142,7 +142,7 @@ body {
   font-size: 18px;
   line-height: 22px;
   color: var(--color-text);
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .hero__price {
@@ -170,6 +170,7 @@ body {
 .hero__price-save {
   font-size: 13px;
   font-weight: 300;
+  margin-left: 8px;
   color: var(--color-text);
 }
 
