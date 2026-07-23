@@ -30,6 +30,7 @@ body {
 
 .text-caption {
   font-size: 13px;
+  line-height: 16px;
   color: var(--color-muted);
 }
 
@@ -49,6 +50,7 @@ body {
   font-family: var(--font-heading);
   font-weight: 800;
   font-size: 20px;
+  line-height: 24px;
 }
 
 .nav {
@@ -337,6 +339,7 @@ body {
 
 .footer__link {
   font-size: 13px;
+  line-height: 16px;
   font-weight: 500;
   color: var(--color-text);
 }
