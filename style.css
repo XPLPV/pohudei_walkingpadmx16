@@ -55,7 +55,7 @@ body {
 .nav {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 26px;
   margin-left: 104px;
   margin-right: auto;
   flex-wrap: wrap;
