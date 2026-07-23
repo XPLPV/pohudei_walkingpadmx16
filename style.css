@@ -241,10 +241,6 @@ body {
   max-width: 320px;
 }
 
-.feature__paragraph:last-of-type {
-  margin-bottom: 0;
-}
-
 .feature__stat {
   margin-top: 24px;
   display: flex;
