@@ -5,17 +5,19 @@ a { text-decoration: none; color: inherit; }
 p, h1 { margin: 0; }
 
 :root {
-  --color-bg: #f2f1ec;
-  --color-text: #141414;
-  --color-muted: #6f6d66;
-  --color-dark: #141414;
-  --color-border: #d8d6cf;
+  --color-bg: #f5f4f0;
+  --color-text: #1b1b18;
+  --color-muted: #6f6c64;
+  --color-dark: #1b1b18;
+  --color-border: #dad7ce;
   --container: 1000px;
   --gutter: 40px;
+  --font-heading: "Manrope", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
 }
 
 body {
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font-body);
   color: var(--color-text);
   background: var(--color-bg);
 }
@@ -35,6 +37,7 @@ body {
 }
 
 .logo {
+  font-family: var(--font-heading);
   font-weight: 700;
   font-size: 15px;
   letter-spacing: 0.04em;
@@ -68,6 +71,7 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  font-family: var(--font-heading);
   border-radius: 8px;
   font-size: 15px;
   font-weight: 600;
@@ -113,6 +117,7 @@ body {
 }
 
 .hero__title {
+  font-family: var(--font-heading);
   font-size: 56px;
   line-height: 1.05;
   font-weight: 700;
@@ -143,6 +148,7 @@ body {
 }
 
 .hero__price-new {
+  font-family: var(--font-heading);
   font-size: 26px;
   font-weight: 700;
 }
@@ -192,6 +198,7 @@ body {
 }
 
 .feature__title {
+  font-family: var(--font-heading);
   font-size: 32px;
   line-height: 1.15;
   font-weight: 700;
@@ -214,6 +221,7 @@ body {
 }
 
 .feature__stat-value {
+  font-family: var(--font-heading);
   font-size: 28px;
   font-weight: 700;
 }
@@ -232,9 +240,6 @@ body {
   width: 100%;
   height: auto;
   max-width: 460px;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  border-radius: 16px;
 }
 
 /* ===== fold (Всегда под рукой) ===== */
@@ -250,6 +255,7 @@ body {
 }
 
 .fold__title {
+  font-family: var(--font-heading);
   font-size: 30px;
   font-weight: 700;
   line-height: 1.2;
