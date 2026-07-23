@@ -141,7 +141,7 @@ body {
   font-size: 18px;
   line-height: 26px;
   color: var(--color-text);
-  max-width: 470px;
+  max-width: 540px;
   margin-bottom: 0;
 }
 
@@ -195,7 +195,9 @@ body {
 
 .hero__image {
   width: 100%;
-  height: auto;
+  aspect-ratio: 1203 / 748;
+  object-fit: cover;
+  object-position: 46% 50%;
   display: block;
 }
 
@@ -230,7 +232,7 @@ body {
   line-height: 1.5;
   color: var(--color-text);
   margin-bottom: 18px;
-  max-width: 294px;
+  max-width: 320px;
 }
 
 .feature__stat {
@@ -359,7 +361,14 @@ body {
     top: -149px;
     left: -68px;
     width: 1066px;
+    z-index: -1;
     margin-top: 0;
+  }
+
+  .hero__image {
+    aspect-ratio: auto;
+    object-fit: fill;
+    object-position: initial;
   }
 
   .hero__caption {
