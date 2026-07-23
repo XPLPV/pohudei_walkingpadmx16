@@ -203,7 +203,7 @@ body {
 
 .hero__caption {
   margin-top: 16px;
-  max-width: 420px;
+  white-space: nowrap;
 }
 
 /* ===== feature (Спортивный зал в вашем доме) ===== */
@@ -256,7 +256,6 @@ body {
 .feature__media {
   display: flex;
   justify-content: center;
-  padding-top: 9px;
 }
 
 .feature__image {
@@ -308,14 +307,12 @@ body {
 .footer__inner {
   display: grid;
   grid-template-columns: 1fr auto;
-  row-gap: 32px;
+  row-gap: 43px;
   align-items: start;
 }
 
 .footer__brand {
-  display: flex;
-  flex-direction: column;
-  gap: 43px;
+  display: block;
 }
 
 .footer__copy {
@@ -397,6 +394,7 @@ body {
   }
 
   .footer__nav {
+    display: flex;
     justify-self: start;
     flex-wrap: wrap;
     gap: 32px;
@@ -435,6 +433,10 @@ body {
   .hero__actions {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .hero__caption {
+    font-size: 10px;
   }
 }
 
