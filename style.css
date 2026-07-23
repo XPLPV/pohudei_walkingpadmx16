@@ -317,11 +317,6 @@ body {
   gap: 8px;
 }
 
-.footer__copy {
-  font-size: 13px;
-  color: var(--color-muted);
-}
-
 .footer__nav {
   display: flex;
   gap: 56px;
@@ -340,6 +335,11 @@ body {
 }
 
 .footer__link:hover {
+  color: var(--color-muted);
+}
+
+.footer__copy {
+  font-size: 13px;
   color: var(--color-muted);
 }
 
