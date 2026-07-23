@@ -310,7 +310,7 @@ body {
 .footer__inner {
   display: grid;
   grid-template-columns: 1fr auto;
-  row-gap: 16px;
+  row-gap: 33px;
   align-items: start;
   padding-top: 36px;
   padding-bottom: 31px;
