@@ -243,7 +243,7 @@ body {
 }
 
 .feature__stat {
-  margin-top: 18px;
+  margin-top: 15px;
   display: flex;
   flex-direction: column;
   gap: 9px;
