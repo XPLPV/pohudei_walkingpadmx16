@@ -242,8 +242,11 @@ body {
   max-width: 320px;
 }
 
+.feature__paragraph:last-of-type {
+  margin-bottom: 18;
+}
 .feature__stat {
-  margin-top: 12px;
+  margin-top: 9px;
   display: flex;
   flex-direction: column;
   gap: 9px;
