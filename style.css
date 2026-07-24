@@ -142,7 +142,7 @@ body {
   font-size: 18px;
   line-height: 22px;
   color: var(--color-text);
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .hero__price {
