@@ -246,6 +246,7 @@ body {
   display: flex;
   margin-top: 20px;
   flex-direction: column;
+  gap: 2px;
 }
 
 .feature__stat-value {
