@@ -120,7 +120,7 @@ body {
 
 .hero__inner {
   position: relative;
-  padding-top: 80px;
+  padding-top: 85px;
   overflow: hidden;
 }
 
@@ -136,7 +136,7 @@ body {
   line-height: 1.05;
   font-weight: 800;
   letter-spacing: -0.01em;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 
 .hero__text {
