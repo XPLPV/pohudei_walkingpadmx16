@@ -243,10 +243,10 @@ body {
 }
 
 .feature__paragraph:last-of-type {
-  margin-bottom: 18;
+  margin-bottom: 20;
 }
 .feature__stat {
-  margin-top: 9px;
+  margin-top: 7px;
   display: flex;
   flex-direction: column;
   gap: 9px;
