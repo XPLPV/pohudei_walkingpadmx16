@@ -194,6 +194,7 @@ body {
 .hero__media {
   position: relative;
   margin-top: 32px;
+  margin-bottom: 48px;
 }
 
 .hero__image {
@@ -205,8 +206,12 @@ body {
 }
 
 .hero__caption {
-  margin-top: 16px;
+  position: absolute;
+  top: 72%;
+  left: 10%;
+  font-size: clamp(8px, 2.6vw, 11px);
   white-space: nowrap;
+  margin-top: 0;
 }
 
 /* ===== feature (Спортивный зал в вашем доме) ===== */
@@ -379,9 +384,9 @@ body {
   }
 
   .hero__caption {
-    position: absolute;
-    top: 649px;
-    left: 148px;
+    top: 65.96%;
+    left: 13.88%;
+    font-size: clamp(10px, 1.25vw, 13px);
     margin-top: 0;
   }
 
