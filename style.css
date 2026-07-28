@@ -383,6 +383,23 @@ body {
 }
 
 @media (max-width: 900px) {
+  .header__inner {
+    flex-wrap: wrap;
+    row-gap: 16px;
+  }
+
+  .header__inner .button--small {
+    margin-left: auto;
+  }
+
+  .nav {
+    order: 3;
+    gap: 16px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   .hero__actions {
     margin-bottom: 40px;
   }
@@ -424,23 +441,6 @@ body {
 @media (max-width: 560px) {
   :root {
     --gutter: 20px;
-  }
-
-  .header__inner {
-    flex-wrap: wrap;
-    row-gap: 16px;
-  }
-
-  .header__inner .button--small {
-    margin-left: auto;
-  }
-
-  .nav {
-    order: 3;
-    gap: 16px;
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
   }
 
   .hero__title {
