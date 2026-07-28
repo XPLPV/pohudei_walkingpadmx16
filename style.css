@@ -209,7 +209,7 @@ body {
   position: absolute;
   top: 72%;
   left: 10%;
-  font-size: clamp(3px, 0.9vw, 4px);
+  font-size: clamp(3.5px, 1.1vw, 14px);
   white-space: nowrap;
   margin-top: 0;
 }
@@ -386,7 +386,6 @@ body {
   .hero__caption {
     top: 65.96%;
     left: 13.88%;
-    font-size: clamp(10px, 1.25vw, 13px);
     margin-top: 0;
   }
 
