@@ -2,15 +2,14 @@
 *, *::before, *::after { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; overflow-x: hidden; }
 a { text-decoration: none; color: inherit; }
-p, h1, h2 { margin: 0; }
+img { display: block; max-width: 100%; }
+h1, h2, p { margin: 0; }
 
 :root {
   --color-bg: #f5f4f0;
   --color-text: #1b1b18;
   --color-muted: #6f6c64;
-  --color-dark: #1b1b18;
   --color-border: #dad7ce;
-  --container: 1000px;
   --gutter: 80px;
   --font-heading: "Manrope", "Helvetica Neue", Arial, sans-serif;
   --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
@@ -20,29 +19,44 @@ body {
   font-family: var(--font-body);
   color: var(--color-text);
   background: var(--color-bg);
+  font-size: 16px;
+  line-height: 1.5;
 }
 
+/* h1/h2 — общая часть (шрифт, насыщенность); размер задаётся там, где заголовок встречается */
+h1, h2 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+small {
+  display: block;
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--color-muted);
+  font-weight: 500;
+}
+
+/* контейнер — единственное место, где нужна ширина макета,
+   поэтому переопределяем свойство напрямую в медиазапросе, без лишней переменной */
 .container {
-  max-width: var(--container);
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 var(--gutter);
 }
 
-.text-caption {
-  font-size: 13px;
-  line-height: 16px;
-  color: var(--color-muted);
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 /* ===== header ===== */
-.header {
-}
-
 .header__inner {
-  padding: 18px var(--gutter);
-  border-bottom: 1px solid var(--color-border);
   display: flex;
   align-items: center;
+  padding: 23.5px var(--gutter);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .logo {
@@ -61,42 +75,46 @@ body {
   flex-wrap: wrap;
 }
 
-.nav__link {
+.nav a {
   font-size: 13px;
   font-weight: 500;
   color: var(--color-text);
   white-space: nowrap;
 }
 
-.nav__link--current {
-  font-weight: 800;
-}
-
-.nav__link:hover {
+.nav a:hover {
   color: var(--color-muted);
 }
 
-/* ===== buttons ===== */
+.nav a[aria-current="page"] {
+  font-weight: 800;
+}
+
+/* ===== buttons =====
+   без строгих width/height: размер кнопки определяют паддинги и содержимое —
+   устойчивее к изменению текста внутри */
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   font-family: var(--font-body);
-  border-radius: 10px;
-  height: 43px;
-  font-size: 15px;
   font-weight: 600;
-  padding: 0 26px;
+  font-size: 15px;
+  line-height: 1;
+  padding: 14px 26px;
+  border-radius: 10px;
   white-space: nowrap;
-  transition: opacity 0.15s ease;
+  transition: opacity 0.15s ease, background-color 0.15s ease;
 }
 
 .button--dark {
-  background: var(--color-dark);
+  background: var(--color-text);
   color: #fff;
 }
 
-.button--dark:hover { opacity: 0.85; }
+.button--dark:hover {
+  opacity: 0.85;
+}
 
 .button--outline {
   background: transparent;
@@ -104,20 +122,17 @@ body {
   border: 1px solid var(--color-border);
 }
 
-.button--outline:hover { background: rgba(0,0,0,0.04); }
+.button--outline:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
 
 .button--small {
-  width: 108px;
-  padding: 0;
   font-size: 13px;
+  padding: 10px 20px;
   flex-shrink: 0;
 }
 
 /* ===== hero (dominant module) ===== */
-.hero {
-  padding: 0;
-}
-
 .hero__inner {
   position: relative;
   padding-top: 85px;
@@ -130,18 +145,16 @@ body {
   max-width: 600px;
 }
 
-.hero__title {
-  font-family: var(--font-heading);
+.hero__content h1 {
   font-size: 58px;
   line-height: 1.05;
-  font-weight: 800;
   margin-bottom: 30px;
 }
 
-.hero__text {
+.hero__content p {
   font-size: 18px;
   line-height: 22px;
-  color: var(--color-text);
+  max-width: 540px;
   margin-bottom: 10px;
 }
 
@@ -153,25 +166,25 @@ body {
   margin-bottom: 16px;
 }
 
-.hero__price-old {
+.hero__price del {
   font-family: var(--font-heading);
   font-size: 18px;
   font-weight: 400;
   color: var(--color-text);
-  text-decoration: line-through;
 }
 
-.hero__price-new {
+.hero__price strong {
   font-family: var(--font-heading);
   font-size: 28px;
   font-weight: 800;
 }
 
-.hero__price-save {
+.hero__price small {
+  display: inline;
   font-size: 13px;
   font-weight: 300;
-  margin-left: 15px;
   color: var(--color-text);
+  margin-left: 1px;
 }
 
 .hero__actions {
@@ -181,30 +194,39 @@ body {
   margin-bottom: 48px;
 }
 
-.hero__actions .button:first-child {
-  width: 160px;
-}
-
-.hero__actions .button:last-child {
-  width: 235px;
-}
-
+/* картинка + подпись: подпись стоит в процентах от самой картинки,
+   поэтому масштабируется вместе с ней на любой ширине, а не только на 1000px */
 .hero__media {
   position: relative;
   margin-top: 32px;
 }
 
-.hero__image {
+.hero__media img {
   width: 100%;
-  aspect-ratio: 1203 / 748;
-  object-fit: cover;
-  object-position: 46% 50%;
-  display: block;
+  height: auto;
 }
 
-.hero__caption {
-  margin-top: 16px;
+.hero__media small {
+  position: absolute;
+  top: 66%;
+  left: 13.9%;
+  font-size: clamp(9px, 1.25vw, 13px);
   white-space: nowrap;
+}
+
+@media (min-width: 901px) {
+  .hero__inner {
+    min-height: 747px;
+  }
+
+  .hero__media {
+    position: absolute;
+    top: -149px;
+    left: -6.8%;
+    width: 106.6%;
+    z-index: -1;
+    margin-top: 0;
+  }
 }
 
 /* ===== feature (Спортивный зал в вашем доме) ===== */
@@ -223,38 +245,37 @@ body {
   max-width: 294px;
 }
 
-.feature__title {
-  font-family: var(--font-heading);
+.feature__text h2 {
   font-size: 36px;
   line-height: 36px;
-  font-weight: 700;
-  max-width: 294px;
   margin-top: -8px;
   margin-bottom: 26px;
 }
 
-.feature__paragraph {
+.feature__text p {
   font-size: 16px;
   line-height: 19px;
-  color: var(--color-text);
   margin-bottom: 15px;
-  max-width: 320px;
+}
+
+.feature__text p:last-of-type {
+  margin-bottom: 0;
 }
 
 .feature__stat {
   display: flex;
-  margin-top: 20px;
   flex-direction: column;
   gap: 2px;
+  margin-top: 20px;
 }
 
-.feature__stat-value {
+.feature__stat strong {
   font-family: var(--font-heading);
   font-size: 28px;
   font-weight: 800;
 }
 
-.feature__stat-label {
+.feature__stat span {
   font-size: 16px;
   color: var(--color-muted);
 }
@@ -263,12 +284,6 @@ body {
   flex: 0 0 433px;
   display: flex;
   justify-content: center;
-}
-
-.feature__image {
-  width: 100%;
-  height: auto;
-  max-width: 433px;
 }
 
 /* ===== fold (Всегда под рукой) ===== */
@@ -280,34 +295,34 @@ body {
   text-align: center;
 }
 
-.fold__title {
-  font-family: var(--font-heading);
+.fold__inner h2 {
   font-size: 36px;
-  font-weight: 700;
   line-height: 36px;
   max-width: 480px;
   margin: 0 auto 27px;
 }
 
-.fold__text {
+.fold__inner p {
   font-size: 16px;
   line-height: 19px;
-  color: var(--color-text);
   max-width: 556px;
   margin: 0 auto 17px;
 }
 
 .fold__diagram {
-  display: block;
   width: 100%;
-  height: auto;
   margin: 0 auto;
 }
 
-/* ===== footer ===== */
-.footer {
+@media (min-width: 901px) {
+  .fold__diagram {
+    width: calc(100% + 73px);
+    margin-left: -36.5px;
+    margin-right: -36.5px;
+  }
 }
 
+/* ===== footer ===== */
 .footer__inner {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -316,14 +331,6 @@ body {
   padding-top: 36px;
   padding-bottom: 31px;
   border-top: 1px solid var(--color-border);
-}
-
-.footer__brand {
-  display: block;
-}
-
-.footer__copy {
-  font-weight: 500;
 }
 
 .footer__nav {
@@ -337,58 +344,23 @@ body {
   gap: 2px;
 }
 
-.footer__link {
+.footer__nav a {
   font-size: 13px;
   line-height: 16px;
   font-weight: 500;
   color: var(--color-text);
 }
 
-.footer__link:hover {
+.footer__nav a:hover {
   color: var(--color-muted);
 }
 
 .footer__model {
   grid-column: 2;
   justify-self: end;
-  font-weight: 500;
 }
 
 /* ===== responsive: 375 — 2000px ===== */
-
-@media (min-width: 901px) {
-  .hero__inner {
-    min-height: 747px;
-  }
-
-  .hero__media {
-    position: absolute;
-    top: -149px;
-    left: -68px;
-    width: 1066px;
-    z-index: -1;
-    margin-top: 0;
-  }
-
-  .hero__image {
-    aspect-ratio: auto;
-    object-fit: fill;
-    object-position: initial;
-  }
-
-  .hero__caption {
-    position: absolute;
-    top: 649px;
-    left: 148px;
-    margin-top: 0;
-  }
-
-  .fold__diagram {
-    width: calc(100% + 73px);
-    margin-left: -36.5px;
-    margin-right: -36.5px;
-  }
-}
 
 @media (max-width: 900px) {
   .hero__actions {
@@ -406,10 +378,6 @@ body {
 
   .feature__media {
     flex-basis: auto;
-  }
-
-  .feature__paragraph {
-    max-width: none;
   }
 
   .footer__inner {
@@ -439,6 +407,10 @@ body {
     row-gap: 16px;
   }
 
+  .header__inner .button--small {
+    margin-left: 16px;
+  }
+
   .nav {
     order: 3;
     gap: 16px;
@@ -447,11 +419,11 @@ body {
     margin-right: 0;
   }
 
-  .hero__title {
+  .hero__content h1 {
     font-size: 38px;
   }
 
-  .hero__text {
+  .hero__content p {
     font-size: 16px;
   }
 
@@ -459,18 +431,10 @@ body {
     flex-direction: column;
     align-items: stretch;
   }
-
-  .hero__caption {
-    font-size: 10px;
-  }
 }
 
 @media (min-width: 1600px) {
-  :root {
-    --container: 1200px;
-  }
-
-  .hero__title {
+  .hero__content h1 {
     font-size: 64px;
   }
 }
