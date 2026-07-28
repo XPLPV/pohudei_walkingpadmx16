@@ -432,7 +432,7 @@ body {
   }
 
   .header__inner .button--small {
-    margin-left: 16px;
+    margin-left: auto;
   }
 
   .nav {
