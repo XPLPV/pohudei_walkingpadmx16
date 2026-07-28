@@ -39,7 +39,7 @@ body {
 }
 
 .header__inner {
-  padding: 18px var(--gutter);
+  padding: 18.5px var(--gutter);
   border-bottom: 1px solid var(--color-border);
   display: flex;
   align-items: center;
@@ -83,10 +83,10 @@ body {
   justify-content: center;
   font-family: var(--font-body);
   border-radius: 10px;
-  height: 43px;
+  line-height: 1;
   font-size: 15px;
   font-weight: 600;
-  padding: 0 26px;
+  padding: 14px 26px;
   white-space: nowrap;
   transition: opacity 0.15s ease;
 }
@@ -107,9 +107,8 @@ body {
 .button--outline:hover { background: rgba(0,0,0,0.04); }
 
 .button--small {
-  width: 108px;
-  padding: 0;
   font-size: 13px;
+  padding: 15px 20px;
   flex-shrink: 0;
 }
 
@@ -180,14 +179,6 @@ body {
   flex-wrap: wrap;
   gap: 14px;
   margin-bottom: 48px;
-}
-
-.hero__actions .button:first-child {
-  width: 160px;
-}
-
-.hero__actions .button:last-child {
-  width: 235px;
 }
 
 .hero__media {
@@ -438,6 +429,10 @@ body {
   .header__inner {
     flex-wrap: wrap;
     row-gap: 16px;
+  }
+
+  .header__inner .button--small {
+    margin-left: 16px;
   }
 
   .nav {
