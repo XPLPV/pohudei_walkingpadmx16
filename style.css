@@ -15,6 +15,22 @@ p, h1, h2 { margin: 0; }
   --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
 }
 
+h1, h2 {
+  font-family: var(--font-heading);
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--color-text);
+}
+
 body {
   font-family: var(--font-body);
   color: var(--color-text);
@@ -129,7 +145,6 @@ body {
 }
 
 .hero__title {
-  font-family: var(--font-heading);
   font-size: 58px;
   line-height: 1.05;
   font-weight: 800;
@@ -139,7 +154,6 @@ body {
 .hero__text {
   font-size: 18px;
   line-height: 22px;
-  color: var(--color-text);
   max-width: 600px;
   margin-bottom: 10px;
 }
@@ -230,22 +244,15 @@ body {
   max-width: 294px;
 }
 
-.feature__title {
-  font-family: var(--font-heading);
-  font-size: 36px;
-  line-height: 36px;
-  font-weight: 700;
+.feature__text h2 {
   max-width: 294px;
   margin-top: -8px;
   margin-bottom: 26px;
 }
 
-.feature__paragraph {
-  font-size: 16px;
-  line-height: 19px;
-  color: var(--color-text);
-  margin-bottom: 15px;
+.feature__text p {
   max-width: 320px;
+  margin-bottom: 15px;
 }
 
 .feature__stat {
@@ -287,19 +294,12 @@ body {
   text-align: center;
 }
 
-.fold__title {
-  font-family: var(--font-heading);
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 36px;
+.fold__inner h2 {
   max-width: 480px;
   margin: 0 auto 27px;
 }
 
-.fold__text {
-  font-size: 16px;
-  line-height: 19px;
-  color: var(--color-text);
+.fold__inner p {
   max-width: 556px;
   margin: 0 auto 17px;
 }
@@ -431,7 +431,7 @@ body {
     flex-basis: auto;
   }
 
-  .feature__paragraph {
+  .feature__text p {
     max-width: none;
   }
 
