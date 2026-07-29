@@ -38,7 +38,7 @@ body {
 
 .container {
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 0;
   padding: 0 var(--gutter);
 }
 
@@ -233,12 +233,12 @@ body {
 .feature__inner {
   display: flex;
   align-items: flex-start;
+  gap: 113px;
 }
 
 .feature__text {
   flex: 0 0 294px;
   max-width: 294px;
-  margin-right: 113px;
 }
 
 .feature__text h2 {
@@ -397,13 +397,12 @@ body {
 
   .feature__inner {
     flex-direction: column;
+    gap: 40px;
   }
 
   .feature__text {
     flex-basis: auto;
     max-width: none;
-    margin-right: 0;
-    margin-bottom: 40px;
   }
 
   .feature__media {
