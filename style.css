@@ -10,7 +10,6 @@ p, h1, h2 { margin: 0; }
   --color-muted: #6f6c64;
   --color-dark: #1b1b18;
   --color-border: #dad7ce;
-  --container: 1000px;
   --gutter: 80px;
   --font-heading: "Manrope", "Helvetica Neue", Arial, sans-serif;
   --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
@@ -23,7 +22,7 @@ body {
 }
 
 .container {
-  max-width: var(--container);
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 var(--gutter);
 }
@@ -473,8 +472,8 @@ body {
 }
 
 @media (min-width: 1600px) {
-  :root {
-    --container: 1200px;
+  .container {
+    max-width: 1200px;
   }
 
   .hero__title {
